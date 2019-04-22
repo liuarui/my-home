@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>携程网</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            min-width: 370px;
+            max-width: 540px;
+            margin: 0 auto;
+            background-color: #f2f2f2;
+        }
+
+        /*头部开始*/
+        header {
+            width: 100%;
+
+        }
+
+        .search img {
+            max-width: 540px;
+            display: block;
+            width: 100%;
+            left: 50%; /*跟随窗口水平居中*/
+            transform: translate(-50%);
+            position: fixed;
+        }
+
+        .ad img {
+            width: 100%;
+            margin-top: 2.2em;
+        }
+
+        /*头部结束*/
+        /*主体开始*/
+        .nav1 {
+            width: 100%;
+            display: flex;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 7px 0;
+            align-items: center; /*align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。*/
+            margin: 4px 0;
+        }
+
+        .nav1 li {
+            flex: 1;
+            text-align: center;
+
+        }
+
+        .nav1 a {
+            font-size: 12px;
+            color: #222222;
+        }
+
+        .nav1_jd {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url("images/nav1.png") no-repeat 0px 0px;
+            background-size: 32px auto;
+        }
+
+        .nav1_zby {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url("images/nav1.png") no-repeat 0px -32px;
+            background-size: 32px auto;
+        }
+
+        .nav1_msl {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url("images/nav1.png") no-repeat 0px -64px;
+            background-size: 32px auto;
+        }
+
+        .nav1_yry {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url("images/nav1.png") no-repeat 0px -96px;
+            background-size: 32px auto;
+        }
+
+        .nav1_gl {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background: url("images/nav1.png") no-repeat 0px -128px;
+            background-size: 32px auto;
+        }
+
+        .row {
+            display: flex;
+            width: 100%;
+            height: 88px;
+            margin-bottom: 3px;
+
+        }
+
+        .row_nav {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            text-shadow: 0 2px rgba(0, 0, 0, .3);
+
+        }
+
+        .row:nth-child(1) {
+            background-color: #fa6754;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .row:nth-child(2) {
+            background-color: #4b8fed;
+        }
+
+        .row:nth-child(3) {
+            background-color: #34c2aa;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .row_nav span {
+            color: #ffffff;
+            margin-top: 2em;
+        }
+
+        .row_nav > a {
+            flex: 1;
+            color: #ffffff;
+            line-height: 44px;
+        }
+
+        .row_nav:nth-child(1) {
+            border-right: 1px solid #ffffff;
+        }
+
+        .row_nav:nth-child(3) {
+            border-left: 1px solid #ffffff;
+        }
+
+        .border_hotel {
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .hotel_bg {
+            background-image: url("images/grid-nav-items-hotel.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .flight_bg {
+            background-image: url("images/grid-nav-items-flight.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .travel_bg {
+            background-image: url("images/grid-nav-items-travel.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="search">
+        <img src="images/search.png" alt="">
+    </div>
+    <div class="ad">
+        <img src="images/ad.png" alt="AD">
+    </div>
+</header>
+<nav>
+    <!--当地小导航开始-->
+    <ul class="nav1">
+        <li><a href="#"><span class="nav1_jd"></span><br/>景点·玩乐<span></span></a></li>
+        <li><a href="#"><span class="nav1_zby"></span><br/><span>周边游</span></a></li>
+        <li><a href="#"><span class="nav1_msl"></span><br/><span>美食林</span></a></li>
+        <li><a href="#"><span class="nav1_yry"></span><br/><span>一日游</span></a></li>
+        <li><a href="#"><span class="nav1_gl"></span><br/><span>当地攻略</span></a></li>
+    </ul>
+    <!--当地小导航结束-->
+    <!--中间大导航开始-->
+    <div class="nav2">
+        <div class="row">
+            <div class="row_nav">
+                <a href="#">酒店</a>
+                <a href="#" class="hotel_bg"></a>
+            </div>
+            <div class="row_nav">
+                <a href="#" class="border_hotel">海外酒店</a>
+                <a href="#">特价酒店</a>
+            </div>
+            <div class="row_nav">
+                <a href="#" class="border_hotel">团购</a>
+                <a href="#">民宿·客栈</a>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="row_nav">
+                <a href="#">机票</a>
+                <a href="#" class="flight_bg"></a>
+            </div>
+            <div class="row_nav">
+                <a href="#" class="border_hotel">火车票</a>
+                <a href="#">特价机票</a>
+            </div>
+            <div class="row_nav">
+                <a href="#" class="border_hotel">汽车票·船票</a>
+                <a href="#">专车·租车</a>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="row_nav travel_bg">
+                <a href="#">旅游</a>
+                <a href="#" ></a>
+            </div>
+            <div class="row_nav">
+                <a href="#" class="border_hotel">门票</a>
+                <a href="#">目的地攻略</a>
+            </div>
+            <div class="row_nav">
+                <a href="#" class="border_hotel">邮轮旅行</a>
+                <a href="#">定制旅行</a>
+            </div>
+
+        </div>
+    </div>
+    <!--中间大导航结束-->
+</nav>
+</body>
+</html>

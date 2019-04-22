@@ -1,0 +1,230 @@
+.contain {
+    height: 480px;
+    position: relative;
+}
+
+.contain_left {
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+    position: relative;
+    float: left;
+}
+
+.contain_left li a {
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+}
+
+.contain_left li a:hover {
+    color: red;
+}
+
+.contain ul {
+    padding: 10px 0;
+}
+
+.contain_left li {
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+    height: 29px;
+    padding-left: 12px;
+}
+
+.contain_left li:hover {
+    background-color: darkgray;
+}
+
+.contain_center {
+    width: 790px;
+    height: 100%;
+    margin-left: 12px;
+    display: inline-block;
+}
+
+.contain_center_top {
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contain_center_bottom {
+    margin-top: 8px;
+}
+
+.contain_center_bottom_left {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.contain_center_bottom_right {
+    display: inline-block;
+}
+
+.contain_right {
+    width: 190px;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+.contain_right_login {
+    height: 85px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.login_t {
+    width: 95px;
+    height: 65px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #666;
+    padding-left: 60px;
+    position: relative;
+}
+
+
+.user-info {
+    width: 50px;
+    height: 50px;
+    background: url("../images/sprite_userinfo@1x.png") -70px 0 no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.user-info img {
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.login_b a {
+    border: 2px solid red;
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: red;
+}
+
+.login_b a:hover {
+    color: white;
+    background-color: red;
+}
+
+.contain_right_news {
+    width: 100%;
+    height: 154px;
+    background-color: #fff;
+    padding-top: 7px;
+}
+
+.news_t {
+    padding: 0 13px;
+    height: 19px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.news_t a {
+    float: left;
+    margin-right: 5px;
+    line-height: 17px;
+    color: #999;
+}
+
+.news_t a:hover {
+    color: red;
+}
+
+.news_t a:nth-child(1) {
+    width: 39px;
+    border-right: 1px solid #cccccc;
+}
+
+.news_t a:nth-child(2) {
+    width: 39px;
+    margin-left: 8px;
+}
+
+.news_t a:nth-child(3) {
+    float: right;
+}
+
+.news_b {
+    padding-left: 13px;
+}
+
+.news_b li {
+    height: 23px;
+    line-height: 23px;
+}
+
+.news_b li a {
+    color: #999999;
+}
+
+.news_b li a:hover {
+    color: red;
+}
+
+.contain_right_expand {
+    height: 209px;
+    background-color: #fff;
+    border-top: 1px solid #cccccc;
+    overflow: hidden;
+
+}
+
+.contain_right_expand ul {
+    padding: 0;
+    width: 195px;
+
+}
+
+.contain_right_expand li {
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    float: left;
+    position: relative;
+}
+
+.contain_right_expand span {
+    position: absolute;
+    bottom: 0;
+    left: 11px;
+    font-size: 12px;
+}
+
+.contain_right_expand li i {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url("../images/sprite_fs@1x.png") no-repeat ;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+
+.contain_right_expand li:hover {
+    color: red;
+}

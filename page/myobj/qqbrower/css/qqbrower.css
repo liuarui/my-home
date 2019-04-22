@@ -1,0 +1,25 @@
+#bg {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: pink;
+}
+.orb1,.orb2,.orb3 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    margin-top: -280px;
+    margin-left: -30px;
+}
+.row1 div,
+.row2 div{  /*渐变圆写法*/
+    background: -webkit-linear-gradient(top,#ffffff ,#dedede);
+    border-radius: 50%;
+
+}

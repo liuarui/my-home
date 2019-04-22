@@ -1,0 +1,17 @@
+.ja-layout {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+.jd-search {
+    position: fixed;
+    width: 100px;
+    height: 40px;
+    background-color: #e92322;
+    max-width: 640px;
+}
+.jd-logo {
+    width: 56px;
+    height: 30px;
+}
