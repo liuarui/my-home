@@ -16,12 +16,13 @@ ul li {
 }
 nav {
     position: fixed;
-    right: 2%;
+    right: -3em;
     top: 50%;
     transform: translateY(-50%);
     z-index: 999;
 
 }
+
 nav ul li a{
     color: black;
     text-shadow:  2px 2px 5px gray;

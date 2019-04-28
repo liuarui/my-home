@@ -1,7 +1,7 @@
 $(function () {
     //滑动主功能实现函数
     $("#fullpage").fullpage({
-        navigation: true,
+        navigation: false,
         navigationPosition: "right",
         scrollingSpeed: 1500,
         navigationTooltips: ["主页","自我介绍","能力值","我的项目","联系我"],
@@ -16,6 +16,10 @@ $(function () {
                     "backgroundPositionX": "20%",
                     "backgroundPositionY": "20%"
                 }, 1500);
+                if(direction == "up"){
+                    $("#nav-introduction").get(0).classList.remove("nav__item--current");
+                    $("#nav-home").get(0).classList.add("nav__item--current");
+                }
                 
             }
             if (nextIndex == 2) {
@@ -24,6 +28,14 @@ $(function () {
                     "backgroundPositionX": "40%",
                     "backgroundPositionY": "40%"
                 }, 1500);
+                if(direction == "up"){
+                    $("#nav-ability").get(0).classList.remove("nav__item--current");
+                    $("#nav-introduction").get(0).classList.add("nav__item--current");
+                }
+                else{
+                    $("#nav-home").get(0).classList.remove("nav__item--current");
+                    $("#nav-introduction").get(0).classList.add("nav__item--current"); 
+                }
             }
             if (nextIndex == 3) {
                 $(".bg").stop();
@@ -31,6 +43,14 @@ $(function () {
                     "backgroundPositionX": "60%",
                     "backgroundPositionY": "50%"
                 }, 1500);
+                if(direction == "up"){
+                    $("#nav-obj").get(0).classList.remove("nav__item--current");
+                    $("#nav-ability").get(0).classList.add("nav__item--current");
+                }
+                else{
+                    $("#nav-introduction").get(0).classList.remove("nav__item--current");
+                    $("#nav-ability").get(0).classList.add("nav__item--current"); 
+                }
             }
             if (nextIndex == 4) {
                 $(".bg").stop();
@@ -38,6 +58,14 @@ $(function () {
                     "backgroundPositionX": "50%",
                     "backgroundPositionY": "80%"
                 }, 1500);
+                if(direction == "up"){
+                    $("#nav-call").get(0).classList.remove("nav__item--current");
+                    $("#nav-obj").get(0).classList.add("nav__item--current");
+                }
+                else{
+                    $("#nav-ability").get(0).classList.remove("nav__item--current");
+                    $("#nav-obj").get(0).classList.add("nav__item--current"); 
+                }
             }
             if (nextIndex == 5) {
                 $(".bg").stop();
@@ -45,6 +73,10 @@ $(function () {
                     "backgroundPositionX": "30%",
                     "backgroundPositionY": "100%"
                 }, 1500);
+                if(direction == "down"){
+                    $("#nav-obj").get(0).classList.remove("nav__item--current");
+                    $("#nav-call").get(0).classList.add("nav__item--current");
+                }
             }
             //滚动背景功能结束
         }
