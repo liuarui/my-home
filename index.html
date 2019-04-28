@@ -6,6 +6,9 @@
     <!-- 移动端适配 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>风景怡人心舒畅</title>
+    <!-- 导航栏css -->
+    <link rel="stylesheet" href="css/component.css">
+    <!-- 我的css -->
     <link rel="stylesheet" href="css/base.css">
     <!-- seo关键字 -->
     <meta name="keywords" content="前端 刘文锐 个人网站 项目 简历 ">
@@ -20,60 +23,41 @@
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <!--    引入全屏滚动结束-->
+    <!-- 引入echarts -->
+    <script src="js/echarts.js"></script>
 </head>
 
 <body>
+
     <div class="bg"></div>
-    <nav>
+    <nav class="nav nav--timiro">
+        <!-- <button class="nav__item  nav__item--current" aria-label="nav-home" id="nav-home"></button>
+        <button class="nav__item" aria-label="nav-introduction" id="nav-introduction"></button>
+        <button class="nav__item" aria-label="nav-ability" id="nav-ability"></button>
+        <button class="nav__item" aria-label="nav-obj" id="nav-obj"></button>
+        <button class="nav__item" aria-label="nav-call" id="nav-call"></button> -->
         <ul>
-            <li><a href="javascript:;" class="nav-home">主页</a></li>
-            <li><a href="javascript:;" class="nav-introduction">自我介绍</a></li>
-            <li><a href="javascript:;" class="nav-ability">能力值</a></li>
-            <li><a href="javascript:;" class="nav-obj">我的项目</a></li>
-            <li><a href="javascript:;" class="nav-call">联系方式</a></li>
+            <li><a href="javascript:;" class="nav-home" id="nav-home">主页</a></li>
+            <li><a href="javascript:;" class="nav-introduction" id="nav-introduction">自我介绍</a></li>
+            <li><a href="javascript:;" class="nav-ability" id="nav-ability">能力值</a></li>
+            <li><a href="javascript:;" class="nav-obj" id="nav-obj">我的项目</a></li>
+            <li><a href="javascript:;" class="nav-call" id="nav-call">联系我</a></li>
         </ul>
         <script type="text/javascript">
             var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
             document.write(unescape("%3Cspan id='cnzz_stat_icon_1277143943'%3E%3C/span%3E%3Cscript src='" +
-                    cnzz_protocol +
-                    "s5.cnzz.com/z_stat.php%3Fid%3D1277143943%26online%3D1' type='text/javascript'%3E%3C/script%3E"
-                    ));
+                cnzz_protocol +
+                "s5.cnzz.com/z_stat.php%3Fid%3D1277143943%26online%3D1' type='text/javascript'%3E%3C/script%3E"
+            ));
         </script>
     </nav>
+
+
     <div id="fullpage">
         <!--    第一屏开始-->
         <div class="section core section1">
             <h1>欢迎来到刘文锐的小站</h1>
-
-            <section>
-                <h2>目前项目</h2>
-                <p>网站待完善，当前仅用于调试项目和展示</p>
-                <ol>
-                    <li>PC端
-                        <ul>
-                            <li><a href="page/myobj/slide">全屏滑动网站</a></li>
-                            <li><a href="page/myobj/tim">TIM仿站</a></li>
-                            <li><a href="page/myobj/JDpro">京东仿站</a></li>
-                            <!-- 制作中
-                            <li><a href="myobj/JDpro">qq浏览器</a></li>
-                        -->
-                        </ul>
-                    </li>
-                    <li>移动端
-                        <ul>
-                            <!-- <li><a href="page/myobj/JDmobile">京东移动端仿站（未完成）</a></li> -->
-                            <li><a href="page/myobj/xcw">携程网小demo</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        Vue（学习中）
-                        <ul>
-                            <li><a href="page/myobj/vue">vue车辆品牌管理系统（基础指令学习）</a></li>
-                        </ul>
-                    </li>
-
-                </ol>
-            </section>
+            <p>网站还在完善中，目前仅用于项目调试</p>
             <section>
                 <h2>联系我</h2>
                 <p>
@@ -84,39 +68,92 @@
                     <h3>我的简历</h3>
                     （虽然很菜但还是要发出来hhh）
                     <br>
-                    可以点击<a href="page/myresume/resume.png">这里</a>，了解我的简历，目前在找实习
+                    可以点击<a href="page/myresume/resume.jpg">这里</a>，了解我的简历，目前在找实习
                     <strong>（html动画简历正在制做中）</strong>
                 </p>
             </section>
             <div>
-                网站已运行:<span id="run_time" style="color:white"></span>
-
+                网站已运行:<span id="run_time"></span>
             </div>
 
 
         </div>
         <!--    第一屏结束-->
         <!-- 第二屏开始 -->
-        <div class="section section2">站长工具试用
-
+        <div class="section section2">
+            <section class="introduction">
+                <a href="https://liuarui.github.io">
+                    <h2>我的头像</h2>
+                </a>
+                <p>自我介绍补充中...<br> （可以点击头像前往我的个人博客）</p>
+            </section>
         </div>
         <!--    第二屏结束-->
         <!--    第三屏开始-->
-        <div class="section section3">3</div>
+        <div class="section section3">
+            <section class="power">
+                <h2>SKILLS:</h2>
+                <div id="power" style="width: 800px;height:600px;"></div>
+            </section>
+        </div>
         <!--    第三屏结束-->
         <!--    第四屏开始-->
         <div class="section section4">
-            <div class="slide">第三屏的第一屏</div>
-            <div class="slide">第三屏的第二屏</div>
+            <section>
+                <h2>目前项目</h2>
+                <p>网站待完善，当前仅用于调试项目和展示</p>
+                <ol>
+                    <li>PC端
+                        <ul>
+                            <li><a href="page/myobj/slide">全屏滑动网站</a></li>
+                            <li><a href="page/myobj/tim">TIM仿站</a></li>
+                            <li><a href="page/myobj/JDpro">京东仿站</a></li>
+                            <!-- 制作中
+                                    <li><a href="myobj/JDpro">qq浏览器</a></li>
+                                -->
+                        </ul>
+                    </li>
+                    <li>移动端
+                        <ul>
+                            <!-- <li><a href="page/myobj/JDmobile">京东移动端仿站（未完成）</a></li> -->
+                            <li><a href="page/myobj/xcw">携程网小demo</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Vue、node.js（学习中）
+                        <ul>
+                            <li><a href="page/myobj/vue">vue车辆品牌管理系统（基础指令学习）</a></li>
+                            <li><a href="#">node.js的express框架图书管理系统</a></li>
+                        </ul>
+                    </li>
+
+                </ol>
+            </section>
+            <!-- <div class="slide">第四屏的第一屏</div>
+            <div class="slide">第四屏的第二屏</div> -->
         </div>
         <!--    第四屏结束-->
         <!--    第五屏开始-->
-        <div class="section section5">5</div>
+        <div class="section section5">
+            <section>
+                <h2>联系我</h2>
+                <p>
+                    对我感兴趣的话可以了解一下<br>
+                    <a href=" https://blog.csdn.net/lm_four"><img src="images/csdn.png" alt="我的CSDN博客">我的CSDN博客</a>
+                    <br>
+                    <a href="https://github.com/Liuarui"><img src="images/git.png" alt="gitHub">我的github（三无github.
+                        T.T）</a>
+                    <h3>我的简历</h3>
+                    （虽然很菜但还是要发出来hhh）
+                    <br>
+                    可以点击<a href="page/myresume/resume.png">这里</a>，了解我的简历，目前在找实习
+                    <strong>（html动画简历正在制做中）</strong>
+                </p>
+            </section>
+        </div>
         <!--    第五屏结束-->
     </div>
 
-
-    </div>
     <script>
         function runTime() {
             var d = new Date(),
@@ -143,6 +180,8 @@
             $('#run_time').html(runTime())
         }, 1000);
     </script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/index.js"></script>
     <script type="text/javascript">
         var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
